@@ -64,5 +64,25 @@
 You have successfully installed Microsoft SQL Server on Windows. You can now create and manage databases using SQL Server Management Studio or command-line tools.
 
 ---
+## Add DLL files into php 8.1 path
+1. Open Path D:\wamp64\bin\php\php8.1.13\ext
+2. Copy dll files and paste in above path
+   - php_pdo_sqlsrv_81_ts_x64.dll
+   - php_sqlsrv_81_ts_x64.dll
+3. Make sure wamp services stop.
+
+## Add PHP extensions in INI file
+1. Open php.ini file of php version 8.1
+2. Add extension
+3. find ;extension=shmop
+4. Below add following extension and save the file : 
+   - extension=php_sqlsrv_81_ts_x64.dll
+   - extension=php_pdo_sqlsrv_81_ts_x64.dll
+5. Make sure wamp Services stopped then save and then restart services.
+
+## Install ODBC drivers on your system
+   - Run the **msodbcsql.msi** file
+   
+
 
 
